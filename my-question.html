@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>UniLink</title>
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="navbar-styles.css">
+    <link rel="stylesheet" href="my-questions.css">
+    <link rel="stylesheet" href="bootstrap-overwrites.css">
+
+</head>
+
+
+
+<body class="my-questions-page-container">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top ">
+        <div class="container">
+            <a class="navbar-brand" href="#">UniLink</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container d-flex justify-content-center align-items-center colored">
+
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="my-question.html">My Question</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="answer-question.html">Answer Question</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="videos.html">Videos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faqs.html">FAQs</a>
+                        </li>
+                    </ul>
+                    <span class="btn btn-primary" id='log-out'>
+                        Log out
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="primary-wrapper">
+        <div class="container">
+            <h1>My Questions</h1>
+            <p>Have a glance at your questions</p>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="container questions-wrapper">
+        <div id="question-container" class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="add-question-placeholder"></div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="container questions-wrapper">
+        <div id="question-container" class="row">
+            <!-- Question cards go here -->
+            <div class="col-xs-12 col-sm-6 col-md-4 pd-b-10" >
+                <div class="add-question-placeholder">
+                    <button class="btn btn-outline-primary" data-bs-target="#answerQuestionModal"
+                        data-bs-toggle="modal">Add
+                        More
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade answers-modal" id="answersModal" tabindex="-1" aria-labelledby="answersModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="answersModalLabel">Answers</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" >
+                    <div id='answer-container'>
+                  
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="modal fade answer-questions-modal" id="answerQuestionModal" tabindex="-1"
+        aria-labelledby="answerQuestionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="answerModalLabel">Answer</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Title</label>
+                            <input type="email" class="form-control" id="title" aria-describedby="emailHelp"
+                                placeholder="Enter Title">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Description</label>
+                            <textarea class="form-control" id="description" placeholder="Type here"></textarea>
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-sm"
+                                data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="saveChanges()">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="authentication.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="my-question.js"></script>
+
+
+    </script>
+</body>
+
+</html>

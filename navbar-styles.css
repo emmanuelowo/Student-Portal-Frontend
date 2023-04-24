@@ -1,0 +1,60 @@
+@import url("./style-variables.css");
+
+.navbar-brand {
+  font-size: 24px !important;
+  font-weight: 500;
+}
+
+.navbar-nav {
+  gap: 27px;
+  padding-left: 40px;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  display: inline;
+  position: absolute;
+  content: "";
+  right: -3px;
+  top: 52%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.3s all;
+  background-color: var(--primary-color);
+}
+.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.nav-link.active::after {
+  opacity: 1;
+}
+
+.colored {
+  /* background-color: white; */
+  border-radius: 0 0 10px 10px;
+}
+
+.colored .navbar-collapse.collapse.show {
+  padding: 20px 0 !important;
+}
+
+.colored .navbar-collapse.collapse.show .navbar-nav {
+  gap: 10px !important;
+}
+
+.colored .navbar-collapse.collapse.show a {
+  color: black !important;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    padding-left: 0;
+  }
+}

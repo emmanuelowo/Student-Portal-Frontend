@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login and Registration Form</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="login-signup.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    </head>
+<body>
+    <!-- Form -->
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form id="signup-form" action="#">
+          <h1>Create Account</h1>
+          <span>or use your email for registration</span>
+          <div class="d-flex flex-column gap-3 w-100 mt-2" >
+          <input type="text"  required id="name-sign-up" placeholder="Name" />
+          <input type="email" required id="email-sign-up" placeholder="Email" />
+          <input type="password" required  id="password-sign-up" placeholder="Password" />
+          <button>Sign Up</button>
+        </div>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form id="signin-form" action="#">
+          <h1>Sign in</h1>
+          <span>or use your account</span>
+          <div class="d-flex flex-column gap-3 w-100 mt-2" >
+
+          <input type="email" required id="email" placeholder="Email" />
+          <input type="password" required id="password" placeholder="Password" />
+          <a href="#">Forgot your password?</a>
+          <button>Sign In</button>
+          </div>  `
+        </form>
+      </div>
+      <div class="overlay-container d-none d-md-block">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>To keep connected with us please login with your personal info</p>
+            <button class="ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Welcome to the UniLink
+            </h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Add your toast container here -->
+      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+        <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Success</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Logged in successfully!
+      </div>
+    </div>
+    <div id="errorToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Error</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Login failed. Please check your email and password.
+      </div>
+    </div>
+  </div>
+
+  <script src="authentication.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  
+    <script src="login-signup.js"></script>
+</body>
+</html>
